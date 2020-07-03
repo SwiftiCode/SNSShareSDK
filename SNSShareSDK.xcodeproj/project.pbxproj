@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		202E248E24AEBE3800E7A3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202E248D24AEBE3800E7A3F0 /* Assets.xcassets */; };
 		202E249124AEBE3900E7A3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202E248F24AEBE3900E7A3F0 /* LaunchScreen.storyboard */; };
 		202E249C24AEBE3900E7A3F0 /* SNSShareSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202E249B24AEBE3900E7A3F0 /* SNSShareSDKTests.swift */; };
+		202E24A824AEC16100E7A3F0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 202E24A724AEC16100E7A3F0 /* FacebookCore */; };
+		202E24AA24AEC16100E7A3F0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 202E24A924AEC16100E7A3F0 /* FacebookLogin */; };
+		202E24AC24AEC16200E7A3F0 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 202E24AB24AEC16200E7A3F0 /* FacebookShare */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202E24AA24AEC16100E7A3F0 /* FacebookLogin in Frameworks */,
+				202E24A824AEC16100E7A3F0 /* FacebookCore in Frameworks */,
+				202E24AC24AEC16200E7A3F0 /* FacebookShare in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +121,11 @@
 			dependencies = (
 			);
 			name = SNSShareSDK;
+			packageProductDependencies = (
+				202E24A724AEC16100E7A3F0 /* FacebookCore */,
+				202E24A924AEC16100E7A3F0 /* FacebookLogin */,
+				202E24AB24AEC16200E7A3F0 /* FacebookShare */,
+			);
 			productName = SNSShareSDK;
 			productReference = 202E248124AEBE3400E7A3F0 /* SNSShareSDK.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 202E247824AEBE3400E7A3F0;
+			packageReferences = (
+				202E24A624AEC16100E7A3F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 202E248224AEBE3400E7A3F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -469,6 +483,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		202E24A624AEC16100E7A3F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		202E24A724AEC16100E7A3F0 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 202E24A624AEC16100E7A3F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		202E24A924AEC16100E7A3F0 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 202E24A624AEC16100E7A3F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		202E24AB24AEC16200E7A3F0 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 202E24A624AEC16100E7A3F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 202E247924AEBE3400E7A3F0 /* Project object */;
 }
